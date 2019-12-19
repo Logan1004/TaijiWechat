@@ -1,0 +1,50 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/check/check",
+    "pages/user/user",
+    "pages/input/input",
+    "pages/record/record"
+  ],
+  "window": {
+    "navigationBarTextStyle": "white",
+    "navigationBarTitleText": "SAP 太极俱乐部",
+    "navigationBarBackgroundColor": "#AB956D",
+    "backgroundColor": "#eeeeee",
+    "enablePullDownRefresh": true
+  },
+  "tabBar": {
+    "color": "#b7b7b7",
+    "selectedColor": "#AB956D",
+    "borderStyle": "black",
+    "backgroundColor": "#f5f5f5",
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "iconPath": "img/tabbar/12.png",
+        "selectedIconPath": "img/tabbar/11.png",
+        "text": "首页"
+      },
+      {
+        "pagePath": "pages/check/check",
+        "iconPath": "img/tabbar/22.png",
+        "selectedIconPath": "img/tabbar/21.png",
+        "text": "打卡"
+      },
+      {
+        "pagePath": "pages/user/user",
+        "iconPath": "img/tabbar/32.png",
+        "selectedIconPath": "img/tabbar/31.png",
+        "text": "我的"
+      }
+    ]
+  },
+  "networkTimeout": {
+    "request": 10000,
+    "connectSocket": 10000,
+    "uploadFile": 10000,
+    "downloadFile": 10000
+  },
+  "debug": false,
+  "sitemapLocation": "sitemap.json"
+}

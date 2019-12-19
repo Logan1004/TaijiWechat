@@ -1,0 +1,6 @@
+<view wx:for-items="{{items}}" wx:key="id">
+<i-divider content=""></i-divider>
+<i-card title="{{item.date}}" extra="" thumb="{{avator}}">
+    <view slot="content">{{item.program}} {{item.number}} {{item.unit}}</view>
+</i-card>
+</view>

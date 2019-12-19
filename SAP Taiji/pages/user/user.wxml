@@ -1,0 +1,85 @@
+<!--pages/my/my.wxml-->
+<form reportSubmit bindsubmit="submitFormId">
+  <view class="header">
+    <view class="user" hoverClass="none">
+      <view class="user_box">
+        <view catchtap="previewImage" class="logo">
+          <image src="{{userInfo.avatarUrl}}"></image>
+          <view class="cu-tag badge {{male==1?'icon-male bg-blue':'icon-female bg-pink'}}"></view>
+        </view>
+        
+          <view class="user_info">
+            <view class="user_name">
+              <text>{{userInfo.nickName}}</text>
+            </view>
+            <view class="vip_expires">最近打卡： {{latestdate}}</view>
+          </view>
+      </view>
+    </view>
+    <view class="info" >
+      <view class="item" bindtap=''>
+        <text class="count">{{totaldate}}</text>
+        <text class="title">总共打卡/天</text>
+      </view>
+      <view class="item">
+        <text class="count">{{totalpractice}}</text>
+        <text class="title">总共完成/练习</text>
+      </view>
+      <view class="item">
+        <text class="count">{{persist}}</text>
+        <text class="title">连续登录/天</text>
+      </view>
+    </view>
+    
+  </view>
+  <view class='wave' class='gif-wave'>
+            <wave waveNum='2' waveStatus='true' background='#7ec0eb' />
+    </view>
+  <!-- 功能列表 -->
+  <view class="nav">
+    <poster id="poster" hide-loading="{{true}}" preload="{{false}}" config="{{posterConfig}}" bind:success="onPosterSuccess" bind:fail="onPosterFail">
+    <button class="item">
+      <view class='wallet'>
+        <text class='icon-location icon'></text>
+        <text decode="{{true}}" space="{{true}}">&nbsp;&nbsp;</text>
+        <text>生成海报</text>
+      </view>
+      <view class="icon">
+        <text class='icon-right'></text>
+      </view>
+    </button>
+    </poster>
+    <!-- <button bindtap="onCreateOtherPoster">异步生成海报</button> -->
+    <!-- <button class="item" bindtap='changeView'>
+      <view class='wallet'>
+        <text class='icon-settings icon'></text>
+        <text decode="{{true}}" space="{{true}}">&nbsp;&nbsp;</text>
+        <text>用户信息管理</text>
+      </view>
+      <view class="icon">
+        <text class='icon-right'></text>
+      </view>
+    </button> -->
+    <button class="item" bindtap='changeView'>
+      <view class='wallet'>
+        <text class='icon-settings icon'></text>
+        <text decode="{{true}}" space="{{true}}">&nbsp;&nbsp;</text>
+        <text>管理员管理</text>
+      </view>
+      <view class="icon">
+        <text class='icon-right'></text>
+      </view>
+    </button>
+    <button class="item" bindtap='changeToHistoryView'>
+      <view class='wallet'>
+        <text class='icon-service icon'></text>
+        <text decode="{{true}}" space="{{true}}">&nbsp;&nbsp;</text>
+        <text>锻炼记录</text>
+      </view>
+      <view class="icon">
+        <text class='icon-right'></text>
+      </view>
+    </button>
+  </view>
+</form>
+

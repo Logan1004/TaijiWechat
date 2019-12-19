@@ -1,0 +1,6 @@
+{
+  "navigationBarTitleText": "打卡",
+  "usingComponents": {
+    "i-button": "../../component/iViewdist/button/index"
+  }
+}

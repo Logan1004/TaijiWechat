@@ -1,0 +1,6 @@
+{
+  "usingComponents": {
+    "i-input": "../../component/iViewdist/input/index",
+    "i-button": "../../component/iViewdist/button/index"
+  }
+}

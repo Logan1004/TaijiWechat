@@ -1,0 +1,24 @@
+
+<view class='giftListView'>
+  <view class='item'  bindtap='goDetails' data-index="1">
+   <view class='iconImageView'>
+    <image class='iconImage' src="../../img/check/jiben.jpeg" mode = 'aspectFit'></image>
+   </view>
+
+   <view class='productDesView'>
+    <text class = 'productDesText'>基本功打卡</text>
+   </view>
+
+  </view>
+  <view class='item'  bindtap='goDetails' data-index="2">
+
+   <view class='iconImageView'>
+    <image class='iconImage' src="../../img/check/zhaoshi.jpg" mode = 'aspectFit'></image>
+   </view>
+
+   <view class='productDesView'>
+    <text class = 'productDesText'>招式打卡</text>
+   </view>
+
+  </view>
+</view>

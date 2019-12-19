@@ -1,0 +1,7 @@
+{
+  "usingComponents": {
+    "i-card": "../../component/iViewdist/card/index",
+    "i-divider": "../../component/iViewdist/divider/index"
+  },
+  "navigationBarTitleText": "历史记录"
+}

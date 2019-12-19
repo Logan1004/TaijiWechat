@@ -1,0 +1,24 @@
+ <form bindsubmit="formSubmit" bindreset="formReset">
+  <i-panel title="基础用法">
+ 
+    <i-input value="{{ value1 }}" title="打卡项目" mode="wrapped"  disabled />
+    <i-input value="{{ value2 }}" title="打卡人" mode="wrapped" disabled/>
+    <i-input value="{{ value3 }}" title="打卡时间" mode="wrapped" disabled/>
+    <view class="i-cell i-input i-input-wrapped">
+      <view class="i-cell-hd i-input-title">打卡项目</view>
+      <picker class = "i-picker" bindchange="bindPickerChange" name = "itemId" value = "{{itemIndex}} " range ="{{itemList}}">
+        <view>{{itemList[itemIndex]}}</view>
+      </picker>
+    </view>
+    <view class="i-cell i-input i-input-wrapped">
+      <view class="i-cell-hd i-input-title">锻炼内容</view>
+        <input type="number" bindblur="handleInputBlur" bindfocus="handleInputFocus" bindinput="handleInput" class="i-input-input i-cell-bd i-input-input-left" maxlength="10" placeholder="请输入数字" placeholder-class="i-input-placeholder" onkeyup="value=value.replace(/[^\d]/g,'')" name="num"></input>
+      <picker class = "i-picker" bindchange="bindPickerChangeUnit" name = "unitId" value = "{{unitIndex}} " range ="{{unitList}}" >
+            <view>{{unitList[unitIndex]}}</view>
+      </picker>
+    </view>
+
+</i-panel>
+
+<button class = "i-button" form-type="submit">打卡</button>
+</form>
